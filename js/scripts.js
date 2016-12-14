@@ -20,7 +20,6 @@ $('a[href*=#]:not([href=#])').click(function () {
                 $('.scroll-up').show();
             }
 
-
             // activte animations in this section
             target.find('.animate').delay(1200).addClass("animated");
             setTimeout(function () {
@@ -32,6 +31,16 @@ $('a[href*=#]:not([href=#])').click(function () {
     }
 });
 
+/* NAV */
 $('.navbar-collapse a').click(function () {
     $(".navbar-collapse").collapse('hide');
+});
+
+/* Auto preenchimento formulário */
+$("#autoFill").click(function () {
+    $("#token").val("512e3e0460c772efdb487295824d3181");
+    $("#email").val("gabriel.feitosa@codeby.com.br");
+    $("#nomeDev").val("Gabriel");
+    $("#estado").val("SP");
+    $("#nivel").val("Ninja");
 });

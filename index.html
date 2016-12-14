@@ -9,9 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Estilos -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -26,29 +24,77 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#section1">TESTE CODEBY</a>
+                <a class="navbar-brand" href="#home">TESTE CODEBY</a>
             </div>
             <div class="navbar-collapse collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#section1">Section1</a></li>
-                    <li><a href="#section2">Section2</a></li>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#formulario">FORMULÁRIO</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="container-fluid" id="section1">
+    <section class="container-fluid" id="home">
         <div class="container v-center">
-            <h1 class="text-center">TESTE CODEBY</h1>
-            <h2 class="text-center">Descrição</h2>
+            <h1 class="text-center">HOME</h1>
+            <h2 class="text-center">Teste Codeby</h2>
         </div>
     </section>
 
-    <section class="container-fluid" id="section2">
+    <section class="container-fluid" id="formulario">
         <div class="container v-center">
-            <h1 class="text-center">Section2</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint atque consequatur provident? Excepturi eveniet quidem voluptatem aperiam amet aliquid fugit nisi aliquam aut quisquam. In doloremque est ratione quaerat perspiciatis!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam hic, cupiditate eligendi totam similique animi odit accusantium laudantium, iste sunt. Iste, sed nemo est alias iusto incidunt ipsam quo tempore!</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center">FORMULÁRIO</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7 col-md-offset-1">
+                    <form>
+                        <div class="row form-group">
+                            <div class="col-md-12 espacar input-group">
+                                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                <input type="text" class="form-control" id="token" maxlength="50" placeholder="Token">
+                            </div>
+                            <div class="col-sm-12 espacar input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
+                                <input type="email" class="form-control" id="email" maxlength="20" placeholder="E-mail">
+                            </div>
+                            <div class="col-sm-12 espacar input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                                <input type="text" class="form-control" id="nomeDev" maxlength="20" placeholder="Nome Dev" required>
+                            </div>
+                            <div class="col-sm-12 espacar input-group">
+                                <span class="input-group-addon"><i class="fa fa-map fa-fw"></i></span>
+                                <input type="text" class="form-control" id="estado" maxlength="2" placeholder="Estado">
+                            </div>
+                            <div class="col-sm-12 espacar input-group">
+                                <span class="input-group-addon"><i class="fa fa-line-chart fa-fw"></i></span>
+                                <input type="text" class="form-control" id="nivel" maxlength="15" placeholder="Nível" required>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-10">
+                                <button class="btn btn-success">Enviar</button>
+                                <button class="btn btn-danger" type="reset">Limpar</button>
+                                <button class="btn btn-primary" id="autoFill" type="button">Auto Preencher</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <p><strong>Dados a serem utilizados no formulário</strong></p>
+                    <ul>
+                        <li>512e3e0460c772efdb487295824d3181</li>
+                        <li>gabriel.feitosa@codeby.com.br</li>
+                        <li>Gabriel</li>
+                        <li>SP</li>
+                        <li>Ninja</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -58,8 +104,8 @@
                 <div class="col-xs-6 col-sm-6 col-md-3 column">
                     <h4>Mapa do site</h4>
                     <ul class="nav">
-                        <li><a href="#section1">Section1</a></li>
-                        <li><a href="#section2">Section2</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#formulario">Formulário</a></li>
                     </ul>
                 </div>
             </div>
@@ -69,7 +115,7 @@
     </footer>
 
     <div class="scroll-up">
-        <a href="#section1"><i class="fa fa-angle-up"></i></a>
+        <a href="#home"><i class="fa fa-angle-up"></i></a>
     </div>
 
     <!-- jQuery -->
