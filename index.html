@@ -6,6 +6,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matheus Pessoa">
 
     <!-- Bootstrap -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
@@ -56,15 +57,15 @@
                         <div class="row form-group">
                             <div class="col-md-12 espacar input-group">
                                 <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                                <input type="text" class="form-control" id="token" maxlength="50" placeholder="Token">
+                                <input type="text" class="form-control" id="token" maxlength="40" placeholder="Token">
                             </div>
                             <div class="col-sm-12 espacar input-group">
-                                <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
-                                <input type="email" class="form-control" id="email" maxlength="20" placeholder="E-mail">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i>*</span>
+                                <input type="email" class="form-control" id="email" maxlength="45" placeholder="E-mail" required>
                             </div>
                             <div class="col-sm-12 espacar input-group">
-                                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                                <input type="text" class="form-control" id="nomeDev" maxlength="20" placeholder="Nome Dev" required>
+                                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i>*</span>
+                                <input type="text" class="form-control" id="nomeDev" maxlength="40" placeholder="Nome dev" required>
                             </div>
                             <div class="col-sm-12 espacar input-group">
                                 <span class="input-group-addon"><i class="fa fa-map fa-fw"></i></span>
@@ -72,14 +73,15 @@
                             </div>
                             <div class="col-sm-12 espacar input-group">
                                 <span class="input-group-addon"><i class="fa fa-line-chart fa-fw"></i></span>
-                                <input type="text" class="form-control" id="nivel" maxlength="15" placeholder="Nível" required>
+                                <input type="text" class="form-control" id="nivel" maxlength="15" placeholder="Nível">
                             </div>
                         </div>
                         <div class="row form-group">
                             <div class="col-sm-10">
-                                <button class="btn btn-success">Enviar</button>
+                                <button class="btn btn-success" type="submit">Enviar</button>
                                 <button class="btn btn-danger" type="reset">Limpar</button>
                                 <button class="btn btn-primary" id="autoFill" type="button">Auto Preencher</button>
+                                <button class="btn btn-info" onclick="document.getElementById('token').value = hex_md5(document.getElementById('email').value)" value="MD5" type="button">Gerar MD5</button>
                             </div>
                         </div>
                     </form>
@@ -122,7 +124,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
+    <!-- jQuery Crypt -->
+    <script src="js/md5.min.js"></script>
     <!-- Scripts -->
     <script src="js/scripts.js"></script>
 </body>
