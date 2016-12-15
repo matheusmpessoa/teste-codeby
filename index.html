@@ -57,31 +57,34 @@
                         <div class="row form-group">
                             <div class="col-md-12 espacar input-group">
                                 <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                                <input type="text" class="form-control" id="token" maxlength="40" placeholder="Token">
+                                <input type="text" class="form-control" id="token" name="token" maxlength="40" placeholder="Token" readonly="true">
                             </div>
                             <div class="col-sm-12 espacar input-group">
                                 <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i>*</span>
-                                <input type="email" class="form-control" id="email" maxlength="45" placeholder="E-mail" required>
+                                <input type="email" class="form-control" id="email" name="email" maxlength="45" placeholder="E-mail" required>
                             </div>
                             <div class="col-sm-12 espacar input-group">
                                 <span class="input-group-addon"><i class="fa fa-user fa-fw"></i>*</span>
-                                <input type="text" class="form-control" id="nomeDev" maxlength="40" placeholder="Nome dev" required>
+                                <input type="text" class="form-control" id="nomeDev" name="nomeDev" maxlength="40" placeholder="Nome dev" required>
                             </div>
                             <div class="col-sm-12 espacar input-group">
                                 <span class="input-group-addon"><i class="fa fa-map fa-fw"></i></span>
-                                <input type="text" class="form-control" id="estado" maxlength="2" placeholder="Estado">
+                                <input type="text" class="form-control" id="estado" name="estado" maxlength="2" placeholder="Estado">
                             </div>
                             <div class="col-sm-12 espacar input-group">
                                 <span class="input-group-addon"><i class="fa fa-line-chart fa-fw"></i></span>
-                                <input type="text" class="form-control" id="nivel" maxlength="15" placeholder="Nível">
+                                <input type="text" class="form-control" id="nivel" name="nivel" maxlength="15" placeholder="Nível">
                             </div>
                         </div>
                         <div class="row form-group">
                             <div class="col-sm-10">
-                                <button class="btn btn-success" type="submit">Enviar</button>
+                                <button class="btn btn-success" type="button" id="btnSerialize">Enviar</button>
                                 <button class="btn btn-danger" type="reset">Limpar</button>
+                            </div>
+                            <div class="col-sm-10 espacar">
                                 <button class="btn btn-primary" id="autoFill" type="button">Auto Preencher</button>
                                 <button class="btn btn-info" onclick="document.getElementById('token').value = hex_md5(document.getElementById('email').value)" value="MD5" type="button">Gerar MD5</button>
+                                <button type="button" id="btnSerialize" class="btn btn-default">Gerar JSON</button>
                             </div>
                         </div>
                     </form>
@@ -89,15 +92,17 @@
                 <div class="col-md-4">
                     <p><strong>Dados a serem utilizados no formulário</strong></p>
                     <ul>
-                        <li>512e3e0460c772efdb487295824d3181</li>
+                        <li>b0cca89f36c7d3e0f395d9c8dfa5e7f2</li>
                         <li>gabriel.feitosa@codeby.com.br</li>
                         <li>Gabriel</li>
                         <li>SP</li>
                         <li>Ninja</li>
                     </ul>
+                    <br>
+                    <p>JSON gerado</p>
+                    <textarea id="result" class="form-control" rows="4" readonly="true"></textarea>
                 </div>
             </div>
-        </div>
     </section>
 
     <footer id="footer">
@@ -126,6 +131,8 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <!-- jQuery Crypt -->
     <script src="js/md5.min.js"></script>
+    <!-- jQuery Serialize JSON -->
+    <script src="js/jquery.serializejson.min.js"></script>
     <!-- Scripts -->
     <script src="js/scripts.js"></script>
 </body>

@@ -38,9 +38,18 @@ $('.navbar-collapse a').click(function () {
 
 /* Auto preenchimento formulário */
 $("#autoFill").click(function () {
-    $("#token").val("512e3e0460c772efdb487295824d3181");
+    $("#token").val("b0cca89f36c7d3e0f395d9c8dfa5e7f2");
     $("#email").val("gabriel.feitosa@codeby.com.br");
     $("#nomeDev").val("Gabriel");
     $("#estado").val("SP");
     $("#nivel").val("Ninja");
+});
+
+/* Gerar JSON */
+$("#btnSerialize").on("click", function () {
+    var obj = $('form').serializeJSON();
+    console.log(obj);
+
+    var jsonString = JSON.stringify(obj);
+    $("#result").val(jsonString);
 });
