@@ -20,3 +20,10 @@ Teste Codeby
 
 ## Tamanho total do projeto
 * 42,6 KB
+
+---
+
+## Como utilizar
+1. Inicie a aplicação com o arquivo *index.html*.
+2. Com a página aberta, vá até a seção *formulário*.
+3. Preencha o formulário e aberte o botão *enviar*.
