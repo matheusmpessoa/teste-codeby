@@ -53,3 +53,8 @@ $("#btnSerialize").on("click", function () {
     var jsonString = JSON.stringify(obj);
     $("#result").val(jsonString);
 });
+
+$('form').submit(function (e) {
+    alert("Formulário convertido para JSON com sucesso");
+    e.preventDefault();
+});
